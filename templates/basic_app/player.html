@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- libreria css -->
+  <link rel="stylesheet" href="{% static "css/stylespl.css" %}">
+  <!-- google-fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+  <!-- libreria iconos -->
+  <link href="{% static "fontawesome-free-5.13.0-web\css\fontawesome.css" %}" rel="stylesheet">
+  <link href="{% static "fontawesome-free-5.13.0-web\css\brands.css" %}" rel="stylesheet">
+  <link href="{% static "fontawesome-free-5.13.0-web\css\solid.min.css" %}" rel="stylesheet">
+  <!-- libreria bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- librerias jquery, and js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Play</title>
+  <link rel="icon" href="{% static "sharelive.ico" %}">
+</head>
+
+<body>
+  <div class="sidenav">
+    <a href="{% url 'principal' %}" id="brand"><img src="{% static "Images/sharelive.png" %}" alt="" width="40px"; height="40px" title="ShareLive";></a>
+    <hr>
+    <a href="{% url 'biblioteca' %}" title="Biblioteca"><i class="fas fa-video"></i></a>
+    <a href="#" class="m event" title="Mi cuenta"><i class="fas fa-users"></i>
+      <a href="#" title="Sobre Nosotros"><i class="fas fa-heart"></i></i></a>
+      <a href="#" title="Historial de reproducción"><i class="fas fa-clock"></i></a>
+  </div>
+
+  <!-- player screen-->
+  <div class="main-screen">
+    <div class="show-present">
+      <h3>Título show</h3>
+      <br>
+      <div class="player embed-responsive embed-responsive-16by9">
+        <iframe id="player" class="embed-responsive-item" src="https://player.twitch.tv/?channel=insomniac&parent=www.example.com" allowfullscreen="true"></iframe>
+      </div>
+      <!-- button description -->
+      <div class="btn-conteiner">
+
+          <a class="btn " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+            Descripción
+          </a>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body ">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+      <!-- end button description -->
+      <!-- carousel galery  -->
+      <div class="soon">
+        <br>
+        <h5>Contenido Similar</h5>
+        <hr>
+        <div id="schart" class="carousel slide chart-group" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-3  col-sm-12">
+                  <div id="articulo" class="cartas">
+
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\2.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-2e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class=" col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\9.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\10.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\4.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-1e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\5.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-2e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\7.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\3.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\5.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-4e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\6.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-4e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\8.png" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-4e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\9.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-5e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\1.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-1e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\2.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-2e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\3.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="col-md-3  col-sm-12">
+                  <div class="cartas">
+                    <img src="{% static "Articles\4.jpg" %}" class="d-block" alt="...">
+                    <p>Descripción</p>
+                    <p class="text-muted counter-3e">This content is a little bit longer.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#schart" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#schart" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- end carousel galery -->
+
+      </div>
+  </div>
+  <!-- end player screen-->
+
+  <script src="{% static "JavaScript\api.js" %}" charset="utf-8"></script>
+  <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/2bc0283773f7a87eff87c2b53d5456cadf91cdd43a78a9e588bee85a69dad87b.js"></script>
+</body>
+
+</html>
